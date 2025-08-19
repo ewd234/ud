@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>USFluenzo - Connect Influencers &amp; Brands</title>
+    <meta name="description" content="The ultimate platform where brands meet authentic influencers for impactful marketing campaigns"/>
+    <meta name="keywords" content="influencer marketing, brand partnerships, social media, campaigns"/>
+    <meta name="author" content="USFluenzo"/>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="USFluenzo - Connect Influencers &amp; Brands"/>
+    <meta property="og:description" content="The ultimate platform where brands meet authentic influencers for impactful marketing campaigns"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.usfluenzo.com/"/>
+    <meta property="og:image" content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-17%20at%2013.27.58_988c2286.jpg-kBOu5AmASWHFshX3oloCo5qYoteQQX.jpeg"/>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Pure black background theme */
+            background: #000000;
+            min-height: 100vh;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            /* Enhanced header styling for black theme */
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .logo {
+            /* Using the provided colorful logo image */
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            /* Updated gradient colors for black theme */
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: #e53e3e;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .card {
+            /* Enhanced card styling with better shadows */
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            /* Enhanced form inputs with better styling */
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(40, 40, 40, 0.8);
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            background: rgba(50, 50, 50, 0.9);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #a0aec0;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            /* Enhanced stat cards with animations */
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            animation: countUp 0.5s ease-out;
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .campaign-item,
+        .user-item {
+            /* Enhanced item styling with better visual hierarchy */
+            background: rgba(40, 40, 40, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .campaign-item:hover,
+        .user-item:hover {
+            background: rgba(50, 50, 50, 0.9);
+            transform: translateX(5px);
+        }
+
+        .campaign-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .campaign-budget {
+            color: #38a169;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .role-influencer {
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .role-brand {
+            background: #c6f6d5;
+            color: #2f855a;
+        }
+
+        .role-admin {
+            background: #bee3f8;
+            color: #2b6cb0;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            /* Enhanced modal with better styling */
+            background: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-modal {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #a0aec0;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: #ffffff;
+        }
+
+        /* Enhanced hero section with better animations */
+        .hero-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(102, 126, 234, 0.05) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #a0aec0;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Added video section styling */
+        .video-section {
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .alert-success {
+            background: rgba(72, 187, 120, 0.2);
+            color: #68d391;
+            border: 1px solid rgba(72, 187, 120, 0.3);
+        }
+
+        .alert-error {
+            background: rgba(245, 101, 101, 0.2);
+            color: #fc8181;
+            border: 1px solid rgba(245, 101, 101, 0.3);
+        }
+
+        /* Enhanced responsive design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Added loading animations */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #667eea;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Using the colorful USFluenzo logo image -->
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-17%20at%2013.27.58_988c2286.jpg-kBOu5AmASWHFshX3oloCo5qYoteQQX.jpeg" alt="USFluenzo Logo" class="logo"/>
+            <nav class="nav-buttons">
+                <button class="btn btn-primary" onclick="showLogin()">Login</button>
+                <button class="btn btn-secondary" onclick="showSignup()">Sign Up</button>
+                <button class="btn btn-danger hidden" id="logoutBtn" onclick="logout()">Logout</button>
+            </nav>
+        </header>
+
+        <!-- Welcome Section -->
+        <div id="welcomeSection" class="card">
+            <!-- Enhanced hero section with better content -->
+            <div class="hero-section">
+                <h1 class="hero-title">Connect Brands with Innovators</h1>
+                <p class="hero-subtitle">The ultimate platform where brands meet authentic influencers for impactful marketing campaigns</p>
+                <div class="hero-buttons">
+                    <!-- Only showing the two main buttons as requested -->
+                    <button class="btn btn-primary" onclick="showSignup()">Join as Influencer</button>
+                    <button class="btn btn-secondary" onclick="showSignup()">Join as Brand</button>
+                </div>
+            </div>
+
+            <!-- Added See It In Action video section -->
+            <div class="video-section">
+                <h2 style="margin-bottom: 1rem; color: #ffffff;">See It In Action</h2>
+                <div class="video-container">
+                    <video controls autoplay muted loop>
+                        <source src="/placeholder-ht8re.png" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="card hidden">
+            <h2>Login to Your Account</h2>
+            <div id="loginAlert"></div>
+            <form onsubmit="login(event)">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required="required"/>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required="required"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="button" class="btn btn-secondary" onclick="showWelcome()">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" class="card hidden">
+            <h2>Create Your Account</h2>
+            <div id="signupAlert"></div>
+            <form onsubmit="signup(event)">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupRole">I am a...</label>
+                    <select id="signupRole" required>
+                        <option value="">Select your role</option>
+                        <option value="influencer">Influencer</option>
+                        <option value="brand">Brand</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button type="button" class="btn btn-secondary" onclick="showWelcome()">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Influencer Dashboard -->
+        <div id="influencerDashboard" class="hidden">
+            <div class="card">
+                <h2>Influencer Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="influencerCampaigns">0</div>
+                        <div>Available Campaigns</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="influencerApplications">0</div>
+                        <div>My Applications</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>My Profile</h3>
+                <form onsubmit="updateInfluencerProfile(event)">
+                    <div class="form-group">
+                        <label for="influencerFollowers">Followers Count</label>
+                        <input type="number" id="influencerFollowers" placeholder="Enter your follower count">
+                    </div>
+                    <div class="form-group">
+                        <label for="influencerNiche">Niche/Category</label>
+                        <input type="text" id="influencerNiche" placeholder="e.g., Fashion, Tech, Lifestyle">
+                    </div>
+                    <div class="form-group">
+                        <label for="influencerBio">Bio</label>
+                        <textarea id="influencerBio" rows="3" placeholder="Tell brands about yourself"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Available Campaigns</h3>
+                <div id="availableCampaigns"></div>
+            </div>
+        </div>
+
+        <!-- Brand Dashboard -->
+        <div id="brandDashboard" class="hidden">
+            <div class="card">
+                <h2>Brand Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="brandCampaigns">0</div>
+                        <div>My Campaigns</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="brandApplications">0</div>
+                        <div>Total Applications</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Create New Campaign</h3>
+                <form onsubmit="createCampaign(event)">
+                    <div class="form-group">
+                        <label for="campaignTitle">Campaign Title</label>
+                        <input type="text" id="campaignTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campaignDescription">Description</label>
+                        <textarea id="campaignDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="campaignBudget">Budget ($)</label>
+                        <input type="number" id="campaignBudget" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campaignCategory">Category</label>
+                        <select id="campaignCategory" required>
+                            <option value="">Select category</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="tech">Technology</option>
+                            <option value="lifestyle">Lifestyle</option>
+                            <option value="food">Food & Beverage</option>
+                            <option value="travel">Travel</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Campaign</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>My Campaigns</h3>
+                <div id="myCampaigns"></div>
+            </div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="adminDashboard" class="hidden">
+            <div class="card">
+                <h2>Admin Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalUsers">0</div>
+                        <div>Total Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCampaigns">0</div>
+                        <div>Total Campaigns</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalInfluencers">0</div>
+                        <div>Influencers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalBrands">0</div>
+                        <div>Brands</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>All Users</h3>
+                <div id="allUsers"></div>
+            </div>
+
+            <div class="card">
+                <h3>All Campaigns</h3>
+                <div id="allCampaigns"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Campaign Applications -->
+    <div id="applicationModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3>Apply for Campaign</h3>
+            <div id="modalCampaignInfo"></div>
+            <form onsubmit="submitApplication(event)">
+                <div class="form-group">
+                    <label for="applicationMessage">Why are you perfect for this campaign?</label>
+                    <textarea id="applicationMessage" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let users = [];
+        let campaigns = [];
+        let applications = [];
+        let currentUser = null;
+        let currentCampaignId = null;
+
+        // Initialize app with better error handling
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                users = JSON.parse(localStorage.getItem('usfluenzo_users') || '[]');
+                campaigns = JSON.parse(localStorage.getItem('usfluenzo_campaigns') || '[]');
+                applications = JSON.parse(localStorage.getItem('usfluenzo_applications') || '[]');
+                currentUser = JSON.parse(localStorage.getItem('usfluenzo_current_user') || 'null');
+            } catch (error) {
+                console.error('Error loading data from localStorage:', error);
+                // Reset to defaults if data is corrupted
+                users = [];
+                campaigns = [];
+                applications = [];
+                currentUser = null;
+            }
+
+            // Create admin user if doesn't exist
+            if (!users.find(u => u.email === 'admin@usfluenzo.com')) {
+                users.push({
+                    id: Date.now(),
+                    name: 'Admin User',
+                    email: 'admin@usfluenzo.com',
+                    password: 'admin123',
+                    role: 'admin',
+                    createdAt: new Date().toISOString()
+                });
+                saveData();
+            }
+
+            if (currentUser) {
+                showDashboard();
+            } else {
+                showWelcome();
+            }
+        });
+
+        // Navigation Functions
+        function showWelcome() {
+            hideAllSections();
+            document.getElementById('welcomeSection').classList.remove('hidden');
+            updateNavigation(false);
+        }
+
+        function showLogin() {
+            hideAllSections();
+            document.getElementById('loginForm').classList.remove('hidden');
+            updateNavigation(false);
+        }
+
+        function showSignup() {
+            hideAllSections();
+            document.getElementById('signupForm').classList.remove('hidden');
+            updateNavigation(false);
+        }
+
+        function showDashboard() {
+            hideAllSections();
+            if (!currentUser) return;
+
+            updateNavigation(true);
+            
+            if (currentUser.role === 'influencer') {
+                document.getElementById('influencerDashboard').classList.remove('hidden');
+                loadInfluencerDashboard();
+            } else if (currentUser.role === 'brand') {
+                document.getElementById('brandDashboard').classList.remove('hidden');
+                loadBrandDashboard();
+            } else if (currentUser.role === 'admin') {
+                document.getElementById('adminDashboard').classList.remove('hidden');
+                loadAdminDashboard();
+            }
+        }
+
+        function hideAllSections() {
+            const sections = ['welcomeSection', 'loginForm', 'signupForm', 'influencerDashboard', 'brandDashboard', 'adminDashboard'];
+            sections.forEach(section => {
+                document.getElementById(section).classList.add('hidden');
+            });
+        }
+
+        function updateNavigation(loggedIn) {
+            const loginBtn = document.querySelector('.nav-buttons .btn-primary');
+            const signupBtn = document.querySelector('.nav-buttons .btn-secondary');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            if (loggedIn) {
+                loginBtn.classList.add('hidden');
+                signupBtn.classList.add('hidden');
+                logoutBtn.classList.remove('hidden');
+            } else {
+                loginBtn.classList.remove('hidden');
+                signupBtn.classList.remove('hidden');
+                logoutBtn.classList.add('hidden');
+            }
+        }
+
+        // Authentication Functions
+        function login(event) {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            const user = users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                currentUser = user;
+                localStorage.setItem('usfluenzo_current_user', JSON.stringify(currentUser));
+                showAlert('loginAlert', 'Login successful!', 'success');
+                setTimeout(() => showDashboard(), 1000);
+            } else {
+                showAlert('loginAlert', 'Invalid email or password', 'error');
+            }
+        }
+
+        function signup(event) {
+            event.preventDefault();
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const role = document.getElementById('signupRole').value;
+
+            if (users.find(u => u.email === email)) {
+                showAlert('signupAlert', 'Email already exists', 'error');
+                return;
+            }
+
+            const newUser = {
+                id: Date.now(),
+                name,
+                email,
+                password,
+                role,
+                createdAt: new Date().toISOString(),
+                profile: role === 'influencer' ? { followers: 0, niche: '', bio: '' } : {}
+            };
+
+            users.push(newUser);
+            currentUser = newUser;
+            saveData();
+            localStorage.setItem('usfluenzo_current_user', JSON.stringify(currentUser));
+            
+            showAlert('signupAlert', 'Account created successfully!', 'success');
+            setTimeout(() => showDashboard(), 1000);
+        }
+
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('usfluenzo_current_user');
+            showWelcome();
+        }
+
+        // Dashboard Functions
+        function loadInfluencerDashboard() {
+            const availableCampaigns = campaigns.filter(c => c.status === 'active');
+            const myApplications = applications.filter(a => a.influencerId === currentUser.id);
+
+            document.getElementById('influencerCampaigns').textContent = availableCampaigns.length;
+            document.getElementById('influencerApplications').textContent = myApplications.length;
+
+            // Load profile data
+            if (currentUser.profile) {
+                document.getElementById('influencerFollowers').value = currentUser.profile.followers || '';
+                document.getElementById('influencerNiche').value = currentUser.profile.niche || '';
+                document.getElementById('influencerBio').value = currentUser.profile.bio || '';
+            }
+
+            // Display available campaigns
+            const campaignsContainer = document.getElementById('availableCampaigns');
+            campaignsContainer.innerHTML = '';
+
+            if (availableCampaigns.length === 0) {
+                campaignsContainer.innerHTML = '<p>No campaigns available at the moment.</p>';
+            } else {
+                availableCampaigns.forEach(campaign => {
+                    const hasApplied = myApplications.some(a => a.campaignId === campaign.id);
+                    const campaignDiv = document.createElement('div');
+                    campaignDiv.className = 'campaign-item';
+                    campaignDiv.innerHTML = `
+                        <div class="campaign-title">${campaign.title}</div>
+                        <p>${campaign.description}</p>
+                        <div class="campaign-budget">Budget: $${campaign.budget}</div>
+                        <p><strong>Category:</strong> ${campaign.category}</p>
+                        ${hasApplied ? 
+                            '<button class="btn btn-secondary" disabled>Applied</button>' :
+                            `<button class="btn btn-primary" onclick="openApplicationModal(${campaign.id})">Apply Now</button>`
+                        }
+                    `;
+                    campaignsContainer.appendChild(campaignDiv);
+                });
+            }
+        }
+
+        function loadBrandDashboard() {
+            const myCampaigns = campaigns.filter(c => c.brandId === currentUser.id);
+            const myApplications = applications.filter(a => 
+                myCampaigns.some(c => c.id === a.campaignId)
+            );
+
+            document.getElementById('brandCampaigns').textContent = myCampaigns.length;
+            document.getElementById('brandApplications').textContent = myApplications.length;
+
+            // Display my campaigns
+            const campaignsContainer = document.getElementById('myCampaigns');
+            campaignsContainer.innerHTML = '';
+
+            if (myCampaigns.length === 0) {
+                campaignsContainer.innerHTML = '<p>You haven\'t created any campaigns yet.</p>';
+            } else {
+                myCampaigns.forEach(campaign => {
+                    const campaignApplications = applications.filter(a => a.campaignId === campaign.id);
+                    const campaignDiv = document.createElement('div');
+                    campaignDiv.className = 'campaign-item';
+                    campaignDiv.innerHTML = `
+                        <div class="campaign-title">${campaign.title}</div>
+                        <p><strong>Brand:</strong> ${campaign.brandId}</p>
+                        <div class="campaign-budget">Budget: $${campaign.budget}</div>
+                        <p><strong>Category:</strong> ${campaign.category}</p>
+                        <p><strong>Applications:</strong> ${campaignApplications.length}</p>
+                        <button class="btn btn-danger" onclick="deleteCampaign(${campaign.id})">Delete</button>
+                    `;
+                    campaignsContainer.appendChild(campaignDiv);
+                });
+            }
+        }
+
+        function loadAdminDashboard() {
+            const influencers = users.filter(u => u.role === 'influencer');
+            const brands = users.filter(u => u.role === 'brand');
+
+            document.getElementById('totalUsers').textContent = users.length;
+            document.getElementById('totalCampaigns').textContent = campaigns.length;
+            document.getElementById('totalInfluencers').textContent = influencers.length;
+            document.getElementById('totalBrands').textContent = brands.length;
+
+            // Display all users
+            const usersContainer = document.getElementById('allUsers');
+            usersContainer.innerHTML = '';
+
+            users.forEach(user => {
+                if (user.role !== 'admin') {
+                    const userDiv = document.createElement('div');
+                    userDiv.className = 'user-item';
+                    userDiv.innerHTML = `
+                        <div><strong>${user.name}</strong> (${user.email})</div>
+                        <span class="role-badge role-${user.role}">${user.role}</span>
+                        <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
+                    `;
+                    usersContainer.appendChild(userDiv);
+                }
+            });
+
+            // Display all campaigns
+            const campaignsContainer = document.getElementById('allCampaigns');
+            campaignsContainer.innerHTML = '';
+
+            campaigns.forEach(campaign => {
+                const brand = users.find(u => u.id === campaign.brandId);
+                const campaignDiv = document.createElement('div');
+                campaignDiv.className = 'campaign-item';
+                campaignDiv.innerHTML = `
+                    <div class="campaign-title">${campaign.title}</div>
+                    <p><strong>Brand:</strong> ${brand ? brand.name : 'Unknown'}</p>
+                    <div class="campaign-budget">Budget: $${campaign.budget}</div>
+                    <button class="btn btn-danger" onclick="deleteCampaign(${campaign.id})">Delete</button>
+                `;
+                campaignsContainer.appendChild(campaignDiv);
+            });
+        }
+
+        // CRUD Functions
+        function updateInfluencerProfile(event) {
+            event.preventDefault();
+            const followers = document.getElementById('influencerFollowers').value;
+            const niche = document.getElementById('influencerNiche').value;
+            const bio = document.getElementById('influencerBio').value;
+
+            currentUser.profile = { followers: parseInt(followers) || 0, niche, bio };
+            
+            // Update in users array
+            const userIndex = users.findIndex(u => u.id === currentUser.id);
+            if (userIndex !== -1) {
+                users[userIndex] = currentUser;
+            }
+
+            saveData();
+            localStorage.setItem('usfluenzo_current_user', JSON.stringify(currentUser));
+            alert('Profile updated successfully!');
+        }
+
+        function createCampaign(event) {
+            event.preventDefault();
+            const title = document.getElementById('campaignTitle').value;
+            const description = document.getElementById('campaignDescription').value;
+            const budget = document.getElementById('campaignBudget').value;
+            const category = document.getElementById('campaignCategory').value;
+
+            const newCampaign = {
+                id: Date.now(),
+                title,
+                description,
+                budget: parseInt(budget),
+                category,
+                brandId: currentUser.id,
+                status: 'active',
+                createdAt: new Date().toISOString()
+            };
+
+            campaigns.push(newCampaign);
+            saveData();
+
+            // Reset form
+            event.target.reset();
+            alert('Campaign created successfully!');
+            loadBrandDashboard();
+        }
+
+        function deleteCampaign(campaignId) {
+            if (confirm('Are you sure you want to delete this campaign?')) {
+                campaigns = campaigns.filter(c => c.id !== campaignId);
+                applications = applications.filter(a => a.campaignId !== campaignId);
+                saveData();
+                
+                if (currentUser.role === 'brand') {
+                    loadBrandDashboard();
+                } else if (currentUser.role === 'admin') {
+                    loadAdminDashboard();
+                }
+            }
+        }
+
+        function deleteUser(userId) {
+            if (confirm('Are you sure you want to delete this user?')) {
+                users = users.filter(u => u.id !== userId);
+                campaigns = campaigns.filter(c => c.brandId !== userId);
+                applications = applications.filter(a => a.influencerId !== userId);
+                saveData();
+                loadAdminDashboard();
+            }
+        }
+
+        // Application Functions
+        function openApplicationModal(campaignId) {
+            currentCampaignId = campaignId;
+            const campaign = campaigns.find(c => c.id === campaignId);
+            const brand = users.find(u => u.id === campaign.brandId);
+
+            document.getElementById('modalCampaignInfo').innerHTML = `
+                <h4>${campaign.title}</h4>
+                <p><strong>Brand:</strong> ${brand ? brand.name : 'Unknown'}</p>
+                <p><strong>Budget:</strong> $${campaign.budget}</p>
+                <p>${campaign.description}</p>
+            `;
+
+            document.getElementById('applicationModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('applicationModal').classList.add('hidden');
+            currentCampaignId = null;
+        }
+
+        function submitApplication(event) {
+            event.preventDefault();
+            const message = document.getElementById('applicationMessage').value;
+
+            const newApplication = {
+                id: Date.now(),
+                campaignId: currentCampaignId,
+                influencerId: currentUser.id,
+                message,
+                status: 'pending',
+                createdAt: new Date().toISOString()
+            };
+
+            applications.push(newApplication);
+            saveData();
+
+            alert('Application submitted successfully!');
+            closeModal();
+            loadInfluencerDashboard();
+            document.getElementById('applicationMessage').value = '';
+        }
+
+        // Utility Functions
+        function saveData() {
+            try {
+                localStorage.setItem('usfluenzo_users', JSON.stringify(users));
+                localStorage.setItem('usfluenzo_campaigns', JSON.stringify(campaigns));
+                localStorage.setItem('usfluenzo_applications', JSON.stringify(applications));
+            } catch (error) {
+                console.error('Error saving data to localStorage:', error);
+                showAlert('', 'Error saving data. Please try again.', 'error');
+            }
+        }
+
+        function showAlert(containerId, message, type) {
+            const container = containerId ? document.getElementById(containerId) : document.body;
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.textContent = message;
+            
+            if (containerId) {
+                container.innerHTML = '';
+                container.appendChild(alertDiv);
+            } else {
+                container.insertBefore(alertDiv, container.firstChild);
+            }
+            
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 5000);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('applicationModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
